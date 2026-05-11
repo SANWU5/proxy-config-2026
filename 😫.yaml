@@ -4,7 +4,7 @@ mode: rule
 log-level: info
 
 proxies:
-  - name: bestproxy-la-http
+  - name:BY:llw 🤣
     type: http
     server: 23.19.4.26
     port: 34780
