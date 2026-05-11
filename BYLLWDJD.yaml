@@ -1,0 +1,17 @@
+proxies:
+  - name: "MySOCKS5Proxy"
+    type: socks5
+    server: 23.19.4.26
+    port: 34780
+    username: xgz020528
+    password: xgz020528
+    udp: true
+
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "MySOCKS5Proxy"
+
+rules:
+  - MATCH,Auto
