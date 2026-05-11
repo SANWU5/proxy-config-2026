@@ -1,0 +1,22 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: bestproxy-la-http
+    type: http
+    server: 23.19.4.26
+    port: 34780
+    username: xgz020528
+    password: xgz020528
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - bestproxy-la-http
+      - DIRECT
+
+rules:
+  - MATCH,PROXY
