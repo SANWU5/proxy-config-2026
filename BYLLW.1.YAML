@@ -1,0 +1,26 @@
+proxies:
+  - name: "我嘞个豆-47o5nneq"
+    type: vless
+    server: 107.172.5.114
+    port: 443
+    uuid: 920e4bf1-1f91-4b8a-8ddc-ba46efe70371
+    network: tcp
+    udp: true
+    tls: true
+    servername: www.intel.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: byNrqb66HmLf-bWHIz_7CfJy2qQvI7o9UmADq_76SzA
+      short-id: f53444839b
+    flow: xtls-rprx-vision
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - "我嘞个豆-47o5nneq"
+      - DIRECT
+
+rules:
+  - IP-CIDR,107.172.5.114/32,DIRECT,no-resolve
+  - MATCH,PROXY
